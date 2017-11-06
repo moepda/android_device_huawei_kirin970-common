@@ -16,10 +16,19 @@
 
 $(call inherit-product, vendor/huawei/kirin970-common/kirin970-common-vendor.mk)
 
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay
+
+TARGET_ROM := $(subst _$(TARGET_DEVICE),,$(TARGET_PRODUCT))
+ifeq ($(TARGET_ROM),lineage)
+DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
+else ifeq ($(TARGET_ROM),du)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-du
+endif
 
 # Audio
 PRODUCT_COPY_FILES += \
