@@ -56,6 +56,15 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+# Huawei Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/HwCamera2/lib/android.hidl.base@1.0.so:system/lib/android.hidl.base@1.0.so \
+    $(LOCAL_PATH)/HwCamera2/lib64/android.hidl.base@1.0.so:system/lib64/android.hidl.base@1.0.so \
+    $(LOCAL_PATH)/HwCamera2/lib64/libHwPostCamera_jni.so:system/lib64/libHwPostCamera_jni.so
+
+PRODUCT_PACKAGES += \
+    HwCamera2
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fingerprint.kl:system/usr/keylayout/fingerprint.kl
