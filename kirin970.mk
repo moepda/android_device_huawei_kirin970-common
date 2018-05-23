@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    OneplusThreeDoze
+    CustomDoze
 
 # HIDL
 PRODUCT_COPY_FILES += \
