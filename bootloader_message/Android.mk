@@ -14,6 +14,10 @@
 
 LOCAL_PATH := $(call my-dir)
 
+TARGET_ROM := $(subst _$(TARGET_DEVICE),,$(TARGET_PRODUCT))
+
+ifneq ($(TARGET_ROM),du)
+
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
 LOCAL_SRC_FILES := bootloader_message.cpp
@@ -23,3 +27,5 @@ LOCAL_CFLAGS := -Werror
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 # include $(BUILD_STATIC_LIBRARY)
+
+endif
