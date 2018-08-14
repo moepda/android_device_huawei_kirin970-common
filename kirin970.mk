@@ -82,6 +82,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.version.sdk=$(PLATFORM_SDK_VERSION) \
     ro.cust.cdrom=/dev/null
 
+# Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril.config=huaweiSignalStrength
+
 # Recovery
 PRODUCT_PACKAGES += \
     resize2fs_static
