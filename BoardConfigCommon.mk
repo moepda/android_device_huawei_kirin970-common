@@ -43,6 +43,9 @@ BOARD_HAVE_BLUETOOTH := true
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := exfat
 
+# Display
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2080000U
+
 # Lineage hardware
 BOARD_HARDWARE_CLASS += \
     $(VENDOR_PATH)/lineagehw
