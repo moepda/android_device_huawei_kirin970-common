@@ -14,3 +14,6 @@ ro.telephony.isHisiRIL=true
 
 # Disable statsd
 ro.statsd.enable=false
+
+# WiFi
+wifi.direct.non-concurrent=true
